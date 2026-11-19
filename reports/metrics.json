@@ -1,0 +1,63 @@
+{
+  "orders": 96456,
+  "late_rate": 0.06774073152525503,
+  "train": {
+    "from": "2017-01-01",
+    "until": "2018-05-01",
+    "orders": 70837,
+    "late_rate": 0.07645721868515042
+  },
+  "test": {
+    "from": "2018-05-01",
+    "until": "2018-08-01",
+    "orders": 19001,
+    "late_rate": 0.03799800010525762
+  },
+  "models": {
+    "logistic_regression": {
+      "cv_roc_auc_mean": 0.6737615424779352,
+      "cv_roc_auc_std": 0.0512127155470041,
+      "cv_pr_auc_mean": 0.17061808681015161,
+      "test_roc_auc": 0.7577607108288745,
+      "test_pr_auc": 0.10632323942870216,
+      "flag_top_10_percent": {
+        "threshold": 0.7268437102295657,
+        "share_flagged": 0.13651913057207515,
+        "precision": 0.1141094834232845,
+        "recall": 0.4099722991689751,
+        "top_10_percent_precision": 0.12361914781693846,
+        "top_10_percent_recall": 0.3254847645429363
+      }
+    },
+    "xgboost": {
+      "cv_roc_auc_mean": 0.6730245508169498,
+      "cv_roc_auc_std": 0.07058767799663011,
+      "cv_pr_auc_mean": 0.1811310055777026,
+      "test_roc_auc": 0.7114553597448231,
+      "test_pr_auc": 0.09811073600416015,
+      "flag_top_10_percent": {
+        "threshold": 0.6202496886253357,
+        "share_flagged": 0.1102047260670491,
+        "precision": 0.109360076408787,
+        "recall": 0.3171745152354571,
+        "top_10_percent_precision": 0.11204629142556549,
+        "top_10_percent_recall": 0.2950138504155125
+      }
+    }
+  },
+  "chosen": "xgboost",
+  "shap_mean_abs_top": {
+    "promised_days": 0.5813,
+    "orders_last_7d": 0.3448,
+    "route_prior_late_rate": 0.3182,
+    "seller_handling_days": 0.318,
+    "distance_km": 0.2804,
+    "same_state": 0.2699,
+    "freight": 0.2174,
+    "customer_state_SP": 0.1857,
+    "customer_state_MG": 0.1789,
+    "approval_hours": 0.106,
+    "seller_prior_orders": 0.1043,
+    "customer_state_RJ": 0.1043
+  }
+}
